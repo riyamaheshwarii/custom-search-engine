@@ -1,11 +1,12 @@
 import streamlit as st
 from exa_py import Exa
+import os 
 
 # ---------- SETUP ----------
 st.set_page_config(page_title="Multi-Site Search Tool", page_icon="🌸", layout="centered")
 
 # Initialize Exa client
-EXA_API_KEY = "e1ce95e6-55db-4d28-9aab-53c501e80434"  # Replace with your actual API key
+EXA_API_KEY = os.environ["EXA_API_KEY"]
 exa = Exa(EXA_API_KEY)
 
 # ---------- CUSTOM CSS ----------
